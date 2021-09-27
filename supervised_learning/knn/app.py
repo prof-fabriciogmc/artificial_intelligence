@@ -18,7 +18,7 @@ ref_img_3 = mpimg.imread('data/ref_square_1.bmp')
 ref_img_4 = mpimg.imread('data/ref_square_2.bmp')
 
 # unknown image
-unknown_img_1 = mpimg.imread('data/unknown_03.bmp')
+unknown_img_1 = mpimg.imread('data/unknown_02.bmp')
 
 ref_img_1_prop = {'img': ref_img_1, 'class': 'circunference', 'rows': len(ref_img_1), 'columns': len(ref_img_1[0])}
 ref_img_2_prop = {'img': ref_img_2, 'class': 'circunference', 'rows': len(ref_img_2), 'columns': len(ref_img_2[0])}
