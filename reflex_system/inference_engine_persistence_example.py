@@ -68,7 +68,7 @@ print(inferences[0].action)
 percepts = [ {"taste": "'loss of taste'", "breath":"'shortness of breath'", "temperature":"38.5"},
              {"breath":"'shortness of breath'", "temperature":"38.5", "taste": "'loss of taste'"},
              {"taste": "'loss of taste'" },
-             {"temperature":"38.5"}]
+             {"temperature":
 
 count = 1
 for inference in inferences:

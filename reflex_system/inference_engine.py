@@ -39,10 +39,10 @@ class Inference:
             else:
                 current_inference = rule_actions[0]
                 k = 1
-                while k < len(rule_actions) and current_inference == True:
+                while k < len(rule_actions) and current_inference == 'True':
                     current_inference = eval(str(current_inference) + " " +self.operators[k-1] +" "+ rule_actions[k])
                     ++k
-                if eval(current_inference):
+                if eval(str(current_inference)):
                     return self.action
                 else:
                     return False
@@ -50,16 +50,18 @@ class Inference:
         else:
             return False
 
-'''
-# Usage example:
 
+# Usage example:
+'''
 rule_1 = Rule(">=", "37.5", "temperature", "True")
 rule_2 = Rule("==", "'loss of taste'", "taste", "True")
 inference = Inference([rule_1, rule_2],["and"],["Covid"])
 
-percepts = {"taste": "'loss of taste'", "breath":"'shortness of breath'", "temperature":"38.5"}
+percepts = {"temperature":"38.5", "taste": "'loss of taste'", "breath":"'shortness of breath'"}
 
 print(inference.infer(percepts))
 
 '''
+
+
 
